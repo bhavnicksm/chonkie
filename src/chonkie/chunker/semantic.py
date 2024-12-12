@@ -310,6 +310,9 @@ class SemanticChunker(BaseChunker):
         # set iterations
         iterations = 0
 
+        # initialize threshold
+        threshold = (low + high) / 2
+        
         while abs(high - low) > self.threshold_step:
             threshold = (low + high) / 2
             # Get the split indices
